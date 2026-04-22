@@ -1,4 +1,4 @@
-all: build
+all:
 
 format:
 	uvx black@24.1.0 .
@@ -8,9 +8,6 @@ lint:
 
 test:
 	uvx pytest@7.4.2 -q
-
-build:
-	uvx hatch@1.14.2 build
 
 clean:
 	rm -rf build dist *.egg-info
