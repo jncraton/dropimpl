@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dropimpl"
+version = "0.1.0"
+description = "Generate student handouts by stripping function bodies while preserving docstrings."
+readme = "readme.md"
+authors = [
+  { name = "Jon Craton", email = "jncraton@gmail.com" }
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+dropimpl = "dropimpl.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["dropimpl"]
