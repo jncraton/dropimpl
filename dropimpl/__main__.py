@@ -6,7 +6,7 @@ def main(argv=None):
     if argv is None:
         argv = sys.argv[1:]
     if len(argv) < 3:
-        print('usage: dropimpl input.py output.py func1 func2')
+        print("usage: dropimpl input.py output.py func1 func2")
         raise SystemExit(2)
     input_file = argv[0]
     output_file = argv[1]
@@ -14,5 +14,5 @@ def main(argv=None):
     generate_handout(input_file, output_file, targets)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
