@@ -12,3 +12,21 @@ def test_strip_basic():
     out = strip_function_bodies(code, ["add"])
     assert "pass" in out
     assert "adds things" in out
+
+
+def test_docstring_indent():
+    code = '''
+def add(a, b):
+    """ 
+    Description
+
+    Example:
+
+    >>> add(1, 1)
+    2
+    """
+    
+    return a + b
+'''
+    out = strip_function_bodies(code, ["add"])
+    assert out == code.replace("return a + b", "pass")
